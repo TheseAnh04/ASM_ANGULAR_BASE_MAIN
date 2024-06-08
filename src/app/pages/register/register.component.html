@@ -1,0 +1,30 @@
+<form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" [formGroup]="registerForm"(ngSubmit)="onRegister()" >
+  <h2 class="text-2xl font-bold mb-6 text-center">Register</h2>
+  <div class="mb-4">
+    <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
+      Name
+    </label>
+    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="Your name" formControlName="name">
+    <span *ngIf="!registerForm.controls.name.valid &&(registerForm.controls.name.dirty ||registerForm.controls.name.touched)" class="text-red-500 text-xs">Tên không được để trống</span>
+  </div>
+  <div class="mb-4">
+    <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+      Email
+    </label>
+    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="Your email" formControlName="email">
+    <span *ngIf="!registerForm.controls.email.valid &&(registerForm.controls.email.dirty ||registerForm.controls.email.touched)" class="text-red-500 text-xs">Sai định dạng email</span>
+  </div>
+  <div class="mb-6">
+    <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+      Password
+    </label>
+    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="************"  formControlName="password">
+    <span *ngIf="!registerForm.controls.password.valid && (registerForm.controls.password.dirty || registerForm.controls.password.touched)"  class="text-red-500 text-xs">Mật khẩu không được ít hơn 8 kí tự</span>
+  </div>
+  <div class="flex items-center justify-between">
+    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit" [disabled]="!registerForm.valid">
+      Đăng kí
+    </button>
+  </div>
+</form>
+

@@ -1,0 +1,58 @@
+<div
+  class="border border-[#B6B6B6] rounded-[20px] py-5 px-3 relative group overflow-hidden"
+>
+  <button
+    class="w-7 h-7 rounded-full bg-[#B3D4E5] flex items-center justify-center absolute top-9 right-6 z-10"
+  >
+    <i class="fa-regular fa-heart"></i>
+  </button>
+
+  <a
+    routerLink="/products/{{ data.id }}"
+    [ngStyle]="{ 'background-image': 'url(' + data.image + ')' }"
+    class="pt-[55%] block w-full bg-center bg-no-repeat bg-contain"
+  >
+  </a>
+
+  <div class="group-hover:opacity-0 transition-all">
+    <a
+      routerLink="/products/888"
+      class="font-medium text-[#003F62] text-[17px] mt-2 inline-block"
+      >{{ data.name }}</a
+    >
+
+    <p class="my-4 font-semibold text-[#4A4A4A] text-[17px]">
+      {{ data.price }}
+    </p>
+
+    <div class="flex items-center gap-x-2 text-[#ACACAC] text-[15px]">
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+    </div>
+  </div>
+
+  <div
+    class="absolute flex gap-x-5 left-0 right-0 bottom-0 px-2 pb-5 translate-y-full group-hover:translate-y-0 transition-all"
+  >
+    <div
+      class="cursor-pointer rounded-[20px] h-[60px] bg-[#87BCD9] px-5 flex-1 flex items-center justify-between"
+    >
+      <p class="font-semibold text-[#272727]">Add to cart</p>
+
+      <button
+        class="w-8 h-8 rounded-full bg-[#EDA415] flex items-center justify-center text-white"
+      >
+        <i class="fa-solid fa-cart-plus"></i>
+      </button>
+    </div>
+
+    <button
+      class="w-[60px] h-[60px] text-[#292D32] rounded-[20px] bg-[#87BCD9] flex items-center justify-center text-xl"
+    >
+      <i class="fa-regular fa-eye"></i>
+    </button>
+  </div>
+</div>

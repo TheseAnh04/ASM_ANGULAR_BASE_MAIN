@@ -1,0 +1,27 @@
+::ng-deep .product-sale .slick-dots {
+  @apply flex items-center justify-center bottom-1;
+}
+
+::ng-deep .home-feedback .slick-dots {
+  @apply -bottom-8;
+}
+
+::ng-deep .product-sale .slick-dots li,
+::ng-deep .home-feedback .slick-dots li {
+  @apply w-4 h-4 mx-1;
+}
+
+::ng-deep .product-sale .slick-dots button,
+::ng-deep .home-feedback .slick-dots button {
+  @apply bg-white rounded-full border border-[#adadad] border-solid w-full h-full;
+}
+
+::ng-deep .product-sale .slick-dots button::before,
+::ng-deep .home-feedback .slick-dots button::before {
+  @apply hidden;
+}
+
+::ng-deep .product-sale .slick-dots .slick-active button,
+::ng-deep .home-feedback .slick-dots .slick-active button {
+  @apply bg-[#eda415] border-[#eda415];
+}

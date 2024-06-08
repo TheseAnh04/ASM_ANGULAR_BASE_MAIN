@@ -1,0 +1,226 @@
+<div class="bg-[#FDFDFD]">
+  <div class="container mx-auto flex items-center h-[76px]">
+    <ul class="flex items-center gap-x-4">
+      <li>
+        <a routerLink="/" class="font-medium text-[#3A3A3A]">Home</a>
+      </li>
+      <li class="text-[#292D32]">
+        <i class="fa-solid fa-chevron-right"></i>
+      </li>
+      <li>
+        <a href="" class="font-medium text-[#3A3A3A]">{{
+          productDetail.category.name
+        }}</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="container mx-auto mt-6 grid grid-cols-2 gap-x-12">
+  <div>
+    <div
+      [ngStyle]="{ 'background-image': 'url(' + productDetail.image + ')' }"
+      class="pt-[80%] bg-contain bg-center bg-no-repeat rounded-[20px] border border-[#ACACAC]"
+    ></div>
+
+    <div class="grid grid-cols-2 gap-x-6 mt-6">
+      <div
+        [ngStyle]="{ 'background-image': 'url(./assets/product-3.png)' }"
+        class="pt-[60%] bg-contain bg-center bg-no-repeat rounded-[20px] border border-[#ACACAC]"
+      ></div>
+      <div
+        [ngStyle]="{ 'background-image': 'url(./assets/product-3.png)' }"
+        class="pt-[60%] bg-contain bg-center bg-no-repeat rounded-[20px] border border-[#ACACAC]"
+      ></div>
+    </div>
+  </div>
+
+  <div>
+    <h1 class="text-[#003F62] font-medium text-3xl">
+      {{ productDetail.name }}
+    </h1>
+    <p class="mt-3 text-[#4A4A4A] font-semibold text-3xl">
+      ${{ productDetail.price }}
+    </p>
+    <div class="mt-5 flex gap-x-2 items-center">
+      <div class="text-2xl text-[#D4A80A]">
+        <i class="fa-regular fa-star"></i>
+      </div>
+      <div class="text-2xl text-[#D4A80A]">
+        <i class="fa-regular fa-star"></i>
+      </div>
+      <div class="text-2xl text-[#D4A80A]">
+        <i class="fa-regular fa-star"></i>
+      </div>
+      <div class="text-2xl text-[#D4A80A]">
+        <i class="fa-regular fa-star"></i>
+      </div>
+      <div class="text-2xl text-[#D4A80A]">
+        <i class="fa-regular fa-star"></i>
+      </div>
+
+      <p class="text-[#4A4A4A] font-medium text-sm">No reviews</p>
+    </div>
+
+    <div class="mt-4 flex items-baseline">
+      <p class="text-[#232323] font-medium text-lg">Availability:</p>
+      <div class="ml-5 mr-3 text-[#30BD57] text-lg">
+        <i class="fa-solid fa-check"></i>
+      </div>
+      <p class="text-[#30BD57] font-medium text-lg">In stock</p>
+    </div>
+
+    <p class="mt-4 text-[#5D5D5D] pb-6 border-b border-b-[#BDBDBD]">
+      Hurry up! only 34 product left in stock!
+    </p>
+
+    <div class="mt-10 flex items-center gap-x-3">
+      <p class="text-[#232323] font-medium text-lg">Color:</p>
+
+      <div class="flex items-center gap-x-2">
+        <div
+          class="w-7 h-7 rounded-full border border-[#AFAFAF] relative flex justify-center items-center"
+        >
+          <span
+            class="w-[18px] h-[18px] rounded-full bg-[#D0EC48] absolute cursor-pointer"
+          ></span>
+        </div>
+        <div
+          class="w-7 h-7 rounded-full relative flex justify-center items-center"
+        >
+          <span
+            class="w-[18px] h-[18px] rounded-full bg-[#565656] absolute cursor-pointer"
+          ></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-6 flex items-center gap-x-3">
+      <p class="text-[#232323] font-medium text-lg">Size:</p>
+
+      <div class="flex items-center gap-x-4">
+        <div
+          class="h-8 min-w-16 bg-[#EEEEEE] text-[#434343] font-medium text-lg flex items-center justify-center cursor-pointer border border-[#000000]"
+        >
+          30
+        </div>
+        <div
+          class="h-8 min-w-16 bg-[#EEEEEE] text-[#434343] font-medium text-lg flex items-center justify-center cursor-pointer"
+        >
+          42
+        </div>
+        <div
+          class="h-8 min-w-16 bg-[#EEEEEE] text-[#434343] font-medium text-lg flex items-center justify-center cursor-pointer"
+        >
+          48
+        </div>
+        <div
+          class="h-8 min-w-16 bg-[#EEEEEE] text-[#434343] font-medium text-lg flex items-center justify-center cursor-pointer"
+        >
+          56
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-6 flex items-center gap-x-3">
+      <p class="text-[#232323] font-medium text-lg">Quantity:</p>
+
+      <div class="flex h-8">
+        <button
+          class="w-8 bg-[#EEEEEE] border-[#BDBDBD] border-t border-l border-b"
+        >
+          -
+        </button>
+        <input
+          type="text"
+          class="border border-[#BDBDBD] w-16 bg-[#EEEEEE] text-center outline-none"
+          value="1"
+        />
+        <button
+          class="w-8 bg-[#EEEEEE] border-[#BDBDBD] border-t border-r border-b"
+        >
+          +
+        </button>
+      </div>
+    </div>
+
+    <div class="mt-11 flex gap-x-7 pb-6 border-b border-b-[#BDBDBD]">
+      <button
+        class="py-5 px-14 rounded-full bg-[#EDA415] font-semibold text-white text-[22px]"
+      >
+        Add to cart
+      </button>
+      <button
+        class="py-5 px-14 rounded-full bg-[#EDA415] font-semibold text-white text-[22px]"
+      >
+        Buy it now
+      </button>
+
+      <button
+        class="w-[73px] h-[73px] rounded-full bg-[#EEEEEE] flex items-center justify-center text-3xl"
+      >
+        <i class="fa-regular fa-heart"></i>
+      </button>
+    </div>
+
+    <div class="flex items-center gap-x-5 mt-4">
+      <p class="text-[#434343] font-medium text-lg">Sku:</p>
+
+      <p class="text-[#434343] font-medium text-lg">01133-9-9</p>
+    </div>
+
+    <div class="flex items-center gap-x-5 mt-6">
+      <p class="text-[#434343] font-medium text-lg">Category:</p>
+
+      <p class="text-[#434343] text-sm">{{ productDetail.category.name }}</p>
+    </div>
+
+    <div class="flex items-center gap-x-5 mt-6">
+      <p class="text-[#434343] font-medium text-lg">Share:</p>
+
+      <div class="flex items-center gap-x-6">
+        <div class="text-2xl text-[#3B3B3B] cursor-pointer">
+          <i class="fa-brands fa-google"></i>
+        </div>
+        <div class="text-2xl text-[#3B3B3B] cursor-pointer">
+          <i class="fa-brands fa-facebook"></i>
+        </div>
+        <div class="text-2xl text-[#3B3B3B] cursor-pointer">
+          <i class="fa-brands fa-whatsapp"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container mx-auto">
+  <div class="mt-16 flex justify-center gap-x-5">
+    <button
+      class="py-[14px] px-8 rounded-[20px] border border-[#8F8F8F] font-medium text-[#373737] text-xl"
+    >
+      Description
+    </button>
+    <button
+      class="py-[14px] px-8 rounded-[20px] font-medium text-white text-xl bg-[#003F62]"
+    >
+      Reviews
+    </button>
+  </div>
+
+  <div class="mt-9 rounded-[20px] border border-[#B8B8B8] p-10">
+    <p class="text-[#003F62] font-semibold text-[22px]">Customer reviews</p>
+    <p class="my-4 text-[#4F4F4F] text-xl">No reviews yet</p>
+
+    <button
+      class="h-10 px-7 bg-[#003F62] text-lg underline flex items-center text-white"
+    >
+      Write a review
+    </button>
+  </div>
+</div>
+
+<div class="container mx-auto mt-16 mb-[100px]">
+  <p class="text-[#1B5A7D] font-semibold text-[28px] mb-12">Related product</p>
+
+  <div class="grid grid-cols-4 gap-x-6"></div>
+</div>

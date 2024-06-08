@@ -1,0 +1,13 @@
+<div class="container mx-auto home-news mb-[100px] home-news">
+  <div class="text-[#1B5A7D] flex items-center justify-between">
+    <p class="font-semibold text-[26px]">Latest news</p>
+
+    <a href="" class="font-medium text-[20px]">View all</a>
+  </div>
+
+  <div class="mt-[52px] grid grid-cols-2 gap-x-5">
+    @for (item of news; track item.title) {
+    <app-news-item [data]="item"></app-news-item>
+    }
+  </div>
+</div>

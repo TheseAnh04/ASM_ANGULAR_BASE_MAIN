@@ -1,0 +1,7 @@
+.checkbox:checked ~ .fake-checkbox {
+  @apply hidden;
+}
+
+.checkbox:checked ~ .fake-checkbox-checked {
+  @apply flex;
+}

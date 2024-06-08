@@ -1,0 +1,63 @@
+<div class="h-screen flex">
+  <aside class="w-96 bg-[#1c2435]">
+    <header class="flex items-center justify-center py-4">
+      <a routerLink="/" class="text-white font-semibold text-2xl">Admin</a>
+    </header>
+
+    <ul>
+      <li class="py-2 px-6 mb-3">
+        <a
+          routerLink="/admin/categories"
+          class="text-white flex items-center gap-x-2"
+        >
+          <i class="fa-solid fa-list"></i>
+          <p>List Categories</p>
+        </a>
+
+        <ul class="ml-7 mt-2">
+          <li>
+            <a routerLink="/admin/categories/add" class="text-white text-sm"
+              >Add Category</a
+            >
+          </li>
+        </ul>
+      </li>
+
+      <li class="py-2 px-6 mb-3">
+        <a
+          routerLink="/admin/products"
+          class="text-white flex items-center gap-x-2"
+        >
+          <i class="fa-solid fa-list"></i>
+          <p>List Products</p>
+        </a>
+
+        <ul class="ml-7 mt-2">
+          <li>
+            <a routerLink="/admin/products/add" class="text-white text-sm"
+              >Add Product</a
+            >
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </aside>
+
+  <div class="flex-1 flex flex-col">
+    <div
+      class="px-6 border-b shadow py-3 flex items-center gap-x-2 justify-end"
+    >
+      <img
+        src="https://picsum.photos/100/100"
+        alt=""
+        class="w-12 h-12 rounded-full"
+      />
+
+      <p>Admin</p>
+    </div>
+
+    <div class="p-3 bg-[#f1f5f9] h-full overflow-y-auto">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

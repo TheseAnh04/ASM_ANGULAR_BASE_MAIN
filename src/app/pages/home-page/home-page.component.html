@@ -1,0 +1,248 @@
+<app-home-banner></app-home-banner>
+
+<div class="mt-[52px] container mx-auto">
+  <div class="relative grid grid-cols-3">
+    @for(cate of listCategory; track cate.id) {
+    <div
+      class="mx-5 h-[147px] border border-[#A5A5A5] rounded-[20px] flex items-center justify-between p-4"
+    >
+      <img src="{{ cate.image }}" alt="" class="h-28" />
+
+      <div class="text-[#1B5A7D]">
+        <p class="font-semibold text-[22px]">{{ cate.name }}</p>
+        <p class="font-medium text-[18px] mt-2">
+          ({{ cate.products.length }} items)
+        </p>
+      </div>
+    </div>
+    }
+
+    <button
+      class="prev absolute top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-[#EAEAEA] left-0"
+    >
+      <i class="fa-solid fa-arrow-left"></i>
+    </button>
+    <button
+      class="next absolute top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-[#EAEAEA] right-0 right-0"
+    >
+      <i class="fa-solid fa-arrow-right"></i>
+    </button>
+  </div>
+</div>
+
+<div class="popular-products container mx-auto mt-20 mb-24">
+  <div class="flex items-center justify-between">
+    <p class="text-[#1B5A7D] font-semibold text-[28px]">Popular products</p>
+
+    <div class="flex gap-x-3">
+      @for (cate of listCategory; track cate.id) {
+      <div
+        class="px-7 h-[45px] rounded-[20px] border border-[#B5B5B5] text-[#1B5A7D] flex cursor-pointer"
+        [ngClass]="{
+          'bg-[#003F62] !border-[#003F62] !text-white': cate.id === categoryId
+        }"
+        (click)="onClickCategory(cate.id)"
+      >
+        <p class="text-[inherit] font-medium m-auto">{{ cate.name }}</p>
+      </div>
+      }
+    </div>
+  </div>
+
+  <div class="mt-14 grid grid-cols-4 gap-6">
+    @for (product of listProducts; track product.id) {
+    <app-product-item [data]="product"></app-product-item>
+    }
+  </div>
+</div>
+
+<!-- banner ads -->
+<div class="container mx-auto">
+  <app-banner-ads></app-banner-ads>
+</div>
+
+<div class="product-sale container mx-auto mt-24 grid grid-cols-12 gap-x-8">
+  <div class="col-span-7 border border-[#B6B6B6] rounded-[20px]">
+    <div class="py-16 px-7 flex gap-x-14 items-center">
+      <div>
+        <img src="assets/product-2.png" alt="" class="w-full h-[380px]" />
+      </div>
+
+      <div>
+        <p class="text-[#003F62] font-semibold text-xl">
+          JBL bar 2.1 deep bass
+        </p>
+
+        <p class="font-semibold text-lg text-[#4A4A4A] my-4">$11,70</p>
+
+        <div class="flex items-center gap-x-2 text-[#ACACAC]">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+
+        <div class="flex gap-x-2 my-8">
+          <div
+            class="w-[78px] h-[78px] rounded-full flex items-center justify-center bg-[#E2F4FF] text-[#EDA415] font-bold text-[22px]"
+          >
+            57
+          </div>
+          <div
+            class="w-[78px] h-[78px] rounded-full flex items-center justify-center bg-[#E2F4FF] text-[#EDA415] font-bold text-[22px]"
+          >
+            11
+          </div>
+          <div
+            class="w-[78px] h-[78px] rounded-full flex items-center justify-center bg-[#E2F4FF] text-[#EDA415] font-bold text-[22px]"
+          >
+            33
+          </div>
+          <div
+            class="w-[78px] h-[78px] rounded-full flex items-center justify-center bg-[#E2F4FF] text-[#EDA415] font-bold text-[22px]"
+          >
+            59
+          </div>
+        </div>
+
+        <div class="flex gap-x-5">
+          <div
+            class="cursor-pointer rounded-[20px] h-[60px] bg-[#87BCD9] px-5 flex-1 flex items-center justify-between"
+          >
+            <p class="font-semibold text-[#272727]">Add to cart</p>
+
+            <button
+              class="w-8 h-8 rounded-full bg-[#EDA415] flex items-center justify-center text-white"
+            >
+              <i class="fa-solid fa-cart-plus"></i>
+            </button>
+          </div>
+
+          <button
+            class="w-[60px] h-[60px] text-[#292D32] rounded-[20px] bg-[#87BCD9] flex items-center justify-center text-xl"
+          >
+            <i class="fa-regular fa-eye"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-span-5 flex">
+    <div class="flex flex-col gap-y-6 flex-1">
+      <div
+        class="h-full py-9 px-5 flex gap-x-10 rounded-[20px] border border-[#B6B6B6] items-center"
+      >
+        <div class="w-52">
+          <img src="assets/product-3.png" alt="" class="block w-full h-full" />
+        </div>
+
+        <div>
+          <p class="text-[#003F62] font-medium text-lg">Play game</p>
+          <p class="text-[#4A4A4A] font-semibold text-lg my-4">$11,70</p>
+          <div class="flex items-center gap-x-2 text-[#ACACAC]">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="h-full py-9 px-5 flex gap-x-10 rounded-[20px] border border-[#B6B6B6] items-center"
+      >
+        <div class="w-52">
+          <img src="assets/product-4.png" alt="" class="block w-full h-full" />
+        </div>
+
+        <div>
+          <p class="text-[#003F62] font-medium text-lg">Play game</p>
+          <p class="text-[#4A4A4A] font-semibold text-lg my-4">$11,70</p>
+          <div class="flex items-center gap-x-2 text-[#ACACAC]">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="container mx-auto mt-16 bg-[#E2F4FF] h-[155px] rounded-[20px] flex items-center justify-around"
+>
+  <div class="flex items-center gap-x-8">
+    <div class="text-6xl text-[#EDA415]">
+      <i class="fa-solid fa-truck"></i>
+    </div>
+
+    <div>
+      <p class="text-[#003F62] font-semibold text-[22px]">Free delivery</p>
+      <p class="text-lg text-[#003F62] mt-2">on order above $50,00</p>
+    </div>
+  </div>
+
+  <div class="flex items-center gap-x-8">
+    <div class="text-6xl text-[#EDA415]">
+      <i class="fa-solid fa-crown"></i>
+    </div>
+
+    <div>
+      <p class="text-[#003F62] font-semibold text-[22px]">Best quality</p>
+      <p class="text-lg text-[#003F62] mt-2">best quality in low price</p>
+    </div>
+  </div>
+
+  <div class="flex items-center gap-x-8">
+    <div class="text-6xl text-[#EDA415]">
+      <i class="fa-solid fa-unlock-keyhole"></i>
+    </div>
+
+    <div>
+      <p class="text-[#003F62] font-semibold text-[22px]">1 year warranty</p>
+      <p class="text-lg text-[#003F62] mt-2">Avaliable warranty</p>
+    </div>
+  </div>
+</div>
+
+<div class="home-feedback container mx-auto mt-16 mb-8 grid grid-cols-3">
+  @for (item of feedbacks; track item.id) {
+  <div class="p-4 border border-[#BABABA] rounded-[20px] mx-2">
+    <div class="flex items-center gap-x-9">
+      <div class="border border-[#EDA415] border-dashed rounded-full p-1.5">
+        <img src="{{ item.avatar }}" alt="" class="block w-[86px] h-[86px]" />
+      </div>
+
+      <p class="font-medium text-[#003F62]">{{ item.name }}</p>
+    </div>
+
+    <div class="px-6 py-3 bg-[#E2F4FF] rounded-[18px] mt-6">
+      <p class="text-sm text-[#003F62]">
+        {{ item.content }}
+      </p>
+    </div>
+  </div>
+
+  }
+</div>
+
+<div
+  class="container mx-auto mt-24 bg-[#E2F4FF] flex items-center justify-around h-[136px]"
+>
+  <img src="assets/brand-1.svg" alt="" class="block h-10" />
+  <img src="assets/brand-2.svg" alt="" class="block h-10" />
+  <img src="assets/brand-3.svg" alt="" class="block h-10" />
+  <img src="assets/brand-4.svg" alt="" class="block h-10" />
+  <img src="assets/brand-5.svg" alt="" class="block h-10" />
+</div>
+
+<!-- news -->
+<div class="mt-24">
+  <app-home-news></app-home-news>
+</div>

@@ -1,0 +1,38 @@
+<div>
+  <h2 class="font-semibold text-xl">Product Management</h2>
+
+  <table class="w-full mt-4 bg-white">
+    <thead>
+      <tr>
+        <th class="py-3 px-2 border border-gray-300">STT</th>
+        <th class="py-3 px-2 border border-gray-300">Name</th>
+        <th class="py-3 px-2 border border-gray-300">Price</th>
+        <th class="py-3 px-2 border border-gray-300">Category</th>
+        <th class="py-3 px-2 border border-gray-300">Image</th>
+        <th class="py-3 px-2 border border-gray-300">action</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let item of products; let i = index">
+        <td class="border border-gray-300 px-2 py-3">{{ i + 1 }}</td>
+        <td class="border border-gray-300 px-2 py-3">{{ item.name }}</td>
+        <td class="border border-gray-300 px-2 py-3">{{ item.price }}</td>
+        <td class="border border-gray-300 px-2 py-3">
+          {{ item.category.name }}
+        </td>
+        <td class="border border-gray-300 px-2 py-3 ">
+          <img src="{{ item.image }}" alt="" class="w-36 h-36 object-cover" />
+        </td>
+        <td class="border border-gray-300 px-2 py-3 text-center">
+          <a href="/admin/products/edit/{{item.id}}" class="inline-block bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out">
+            Sửa
+          </a>
+          <button class="inline-block bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out ml-2" (click)="onDelete(item.id!)" >
+            Xóa
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

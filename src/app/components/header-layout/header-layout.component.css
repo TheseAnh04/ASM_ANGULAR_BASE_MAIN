@@ -1,0 +1,4 @@
+.menu-active p,
+.menu-active div {
+  text-shadow: 0px 4px 4px #00000040;
+}

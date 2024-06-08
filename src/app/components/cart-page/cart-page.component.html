@@ -1,0 +1,216 @@
+<div class="bg-[#FDFDFD]">
+  <div class="container mx-auto flex items-center h-[76px]">
+    <ul class="flex items-center gap-x-4">
+      <li>
+        <a routerLink="/" class="font-medium text-[#3A3A3A]">Home</a>
+      </li>
+      <li class="text-[#292D32]">
+        <i class="fa-solid fa-chevron-right"></i>
+      </li>
+      <li>
+        <a href="" class="font-medium text-[#3A3A3A]">All category</a>
+      </li>
+      <li class="text-[#292D32]">
+        <i class="fa-solid fa-chevron-right"></i>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="container mx-auto mt-12 mb-24">
+  <div class="grid grid-cols-12 gap-x-5">
+    <div class="col-span-8">
+      <table class="w-full">
+        <thead class="bg-[#E2F4FF]">
+          <th class="py-3.5 text-[#232323] font-medium text-xl text-left pl-8">
+            Product
+          </th>
+          <th class="py-3.5 text-[#232323] font-medium text-xl">Price</th>
+          <th class="py-3.5 text-[#232323] font-medium text-xl">Quantity</th>
+          <th class="py-3.5 text-[#232323] font-medium text-xl">Subtotal</th>
+          <th class="py-3.5 text-[#232323] font-medium text-xl"></th>
+        </thead>
+
+        <tbody>
+          <tr class="border-b border-b-[#C3C3C3]">
+            <td class="py-6">
+              <div class="flex items-center gap-x-5">
+                <img
+                  src="./assets/product-detail.png"
+                  alt=""
+                  class="w-[100px] h-[100px] object-cover"
+                />
+
+                <div>
+                  <p class="text-[#003F62] font-semibold text-xl">Play game</p>
+                  <p class="my-3 text-xl text-[#2F2F2F]">Color: Green</p>
+                  <p class="text-[#2F2F2F] text-xl">Size: 30</p>
+                </div>
+              </div>
+            </td>
+
+            <td class="py-6 text-center">
+              <p class="text-[#2F2F2F] font-medium text-[22px]">$ 11,70</p>
+            </td>
+
+            <td>
+              <div class="flex h-8 justify-center">
+                <button
+                  class="w-8 bg-[#EEEEEE] border-[#BDBDBD] border-t border-l border-b"
+                >
+                  -
+                </button>
+                <input
+                  type="text"
+                  class="border border-[#BDBDBD] w-16 bg-[#EEEEEE] text-center outline-none"
+                  value="1"
+                />
+                <button
+                  class="w-8 bg-[#EEEEEE] border-[#BDBDBD] border-t border-r border-b"
+                >
+                  +
+                </button>
+              </div>
+            </td>
+
+            <td class="py-6 text-[#2F2F2F] font-medium text-[22px] text-center">
+              $ 11,70
+            </td>
+
+            <td>
+              <p
+                class="w-5 h-5 cursor-pointer flex items-center justify-center text-[#292D32] border border-[#292D32] rounded-full"
+              >
+                &times;
+              </p>
+            </td>
+          </tr>
+          <tr class="border-b border-b-[#C3C3C3]">
+            <td class="py-6">
+              <div class="flex items-center gap-x-5">
+                <img
+                  src="./assets/product-3.png"
+                  alt=""
+                  class="w-[100px] h-[100px] object-cover"
+                />
+
+                <div>
+                  <p class="text-[#003F62] font-semibold text-xl">Play game</p>
+                  <p class="my-3 text-xl text-[#2F2F2F]">Color: Black</p>
+                  <p class="text-[#2F2F2F] text-xl">Size: 30</p>
+                </div>
+              </div>
+            </td>
+
+            <td class="py-6 text-center">
+              <p class="text-[#2F2F2F] font-medium text-[22px]">$ 11,70</p>
+            </td>
+
+            <td>
+              <div class="flex h-8 justify-center">
+                <button
+                  class="w-8 bg-[#EEEEEE] border-[#BDBDBD] border-t border-l border-b"
+                >
+                  -
+                </button>
+                <input
+                  type="text"
+                  class="border border-[#BDBDBD] w-16 bg-[#EEEEEE] text-center outline-none"
+                  value="1"
+                />
+                <button
+                  class="w-8 bg-[#EEEEEE] border-[#BDBDBD] border-t border-r border-b"
+                >
+                  +
+                </button>
+              </div>
+            </td>
+
+            <td class="py-6 text-[#2F2F2F] font-medium text-[22px] text-center">
+              $ 11,70
+            </td>
+
+            <td>
+              <p
+                class="w-5 h-5 cursor-pointer flex items-center justify-center text-[#292D32] border border-[#292D32] rounded-full"
+              >
+                &times;
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="flex items-center justify-between mt-8">
+        <button
+          class="bg-[#EDA415] py-5 px-8 rounded-full text-white font-semibold text-[22px] min-w-56"
+        >
+          Continue shopping
+        </button>
+
+        <button
+          class="border border-[#A9A9A9] py-5 px-8 rounded-full text-[#797979] font-semibold text-[22px] min-w-56"
+        >
+          Update cart
+        </button>
+
+        <button
+          class="border border-[#C33131] py-5 px-8 rounded-full text-[#C33131] font-semibold text-[22px] min-w-56"
+        >
+          Clear cart
+        </button>
+      </div>
+    </div>
+
+    <div class="col-span-4 border border-[#C3C3C3]">
+      <div class="h-14 bg-[#E2F4FF] flex items-center justify-center">
+        <p class="font-medium text-[#232323] text-xl">Cart total</p>
+      </div>
+
+      <div class="px-8 py-5">
+        <div
+          class="flex items-center justify-between pb-5 border-b border-b-[#AFAFAF]"
+        >
+          <p class="text-xl text-[#232323] font-medium">Subtotal</p>
+
+          <p class="text-xl text-[#232323] font-medium">$ 23,20</p>
+        </div>
+
+        <div
+          class="mt-8 h-14 rounded-full border border-[#DFDFDF] flex items-center justify-between px-5 gap-x-2"
+        >
+          <input
+            type="text"
+            class="w-full text-[#232323] [&::placeholder]:text-[#232323] outline-none"
+            placeholder="Enter coupon code"
+          />
+
+          <p class="text-sm font-medium text-[#003F62]">Apply</p>
+        </div>
+
+        <div class="mt-8 border-t border-t-[#AFAFAF] pt-8">
+          <select
+            name=""
+            id=""
+            class="h-14 border border-[#DFDFDF] rounded-full w-full px-4 outline-none"
+          >
+            <option value="">Country</option>
+            <option value="">Việt Nam</option>
+          </select>
+        </div>
+
+        <div class="my-7 flex items-center justify-between">
+          <p class="text-[#232323] text-xl">Total amount</p>
+
+          <p class="text-[#232323] text-xl">$ 23,20</p>
+        </div>
+
+        <button
+          class="py-3 rounded-full bg-[#EDA415] font-semibold text-xl text-white w-full"
+        >
+          Proceed to checkout
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

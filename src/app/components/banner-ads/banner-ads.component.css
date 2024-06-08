@@ -1,0 +1,5 @@
+.banner-ads {
+  background-image: url("../../../assets/banner-ads.png");
+
+  @apply bg-center bg-no-repeat bg-cover rounded-[20px];
+}

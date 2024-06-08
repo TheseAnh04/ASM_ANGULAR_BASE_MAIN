@@ -1,0 +1,133 @@
+<div
+  class="container mx-auto mt-5 mb-[30px] flex items-center text-sm text-[#292D32] justify-between"
+>
+  <p>
+    Need help? Call us: <a href="tel:(+98) 0234 456 789">(+98) 0234 456 789</a>
+  </p>
+
+  <div class="flex items-center gap-x-8">
+    <div class="flex items-center gap-x-5">
+      <div class="text-2xl">
+        <i class="fa-solid fa-location-dot"></i>
+      </div>
+
+      <p>Our store</p>
+    </div>
+
+    <div class="flex items-center gap-x-5">
+      <div class="text-2xl">
+        <i class="fa-solid fa-truck-fast"></i>
+      </div>
+
+      <p>Track your order</p>
+    </div>
+  </div>
+</div>
+
+<div class="bg-[#003F62]">
+  <div class="container mx-auto flex items-center h-[100px]">
+    <a routerLink="/">
+      <img src="assets/logo.svg" alt="" class="h-10" />
+    </a>
+
+    <form
+      class="ml-20 w-[438px] rounded-[20px] h-14 flex bg-white"
+      (ngSubmit)="onHandleSearch()"
+      [formGroup]="formSearchProd"
+    >
+      <input
+        type="text"
+        class="rounded-l-[inherit] flex-1 outline-none px-3 text-sm text-[#292D32] [&::placeholder]:text-sm [&::placeholder]:text-[#292D32]"
+        placeholder="Search any things"
+        formControlName="name"
+      />
+
+      <button
+        class="text-sm font-semibold px-10 bg-[#EDA415] text-white self-stretch rounded-[inherit]"
+      >
+        Search
+      </button>
+    </form>
+
+    <div class="ml-auto flex items-center gap-x-7 text-sm text-white">
+      <a
+        routerLink="/register"
+        class="flex items-center gap-x-3 cursor-pointer"
+      >
+        <div class="text-2xl">
+          <i class="fa-regular fa-user"></i>
+        </div>
+
+        <p>Sign up</p>
+      </a>
+
+      <div class="flex items-center gap-x-3">
+        <div class="flex items-center gap-x-1">
+          <div class="text-2xl">
+            <i class="fa-regular fa-heart"></i>
+          </div>
+        </div>
+
+        <a routerLink="/login">Sign in</a>
+      </div>
+
+      <div class="flex items-center gap-x-3">
+        <div class="flex items-center gap-x-1">
+          <div class="text-2xl">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+        </div>
+
+        <a routerLink="/cart">Cart</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="bg-[#F4F4F4]">
+  <div class="container mx-auto flex h-[70px] items-center">
+    <a
+      routerLink="/products"
+      class="self-stretch font-medium flex gap-x-4 bg-[#EDA415] items-center px-4 text-white cursor-pointer"
+    >
+      <p>Browse categories</p>
+
+      <div>
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+    </a>
+
+    <div class="ml-20 flex text-[#3A3A3A] self-stretch">
+      <a class="flex items-center gap-x-3 px-4 cursor-pointer menu-active">
+        <p>Home</p>
+        <div>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+      </a>
+
+      <a class="flex items-center gap-x-3 px-4 cursor-pointer">
+        <p>Catalog</p>
+        <div>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+      </a>
+
+      <a class="flex items-center px-4 cursor-pointer">
+        <p>Blog</p>
+      </a>
+
+      <a class="flex items-center gap-x-3 px-4 cursor-pointer">
+        <p>Pages</p>
+        <div>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+      </a>
+
+      <a class="flex items-center px-4 cursor-pointer">
+        <p>About Us</p>
+      </a>
+    </div>
+
+    <p class="ml-auto font-semibold text-[#003F62]">30 Days Free Return</p>
+  </div>
+</div>

@@ -1,0 +1,73 @@
+{
+  "products": [
+    {
+      "name": "Blue bery",
+      "price": 25000,
+      "description": "demo",
+      "image": "./assets/anh1.jpg",
+      "categoryId": "98d1",
+      "id": "6ce7"
+    },
+    {
+      "name": "Product 2",
+      "price": 90000,
+      "description": "Hehe",
+      "image": "./assets/anh2.jpg",
+      "categoryId": "1b63",
+      "id": "0a4b"
+    },
+    {
+      "name": "Product 3",
+      "price": 89999,
+      "description": "heheh",
+      "image": "./assets/anh3.jpg",
+      "categoryId": "98d1",
+      "id": "hvh0VGn"
+    },
+    {
+      "name": "Product 4",
+      "price": 5000,
+      "description": "deo biet",
+      "image": "./assets/anh4.jpg",
+      "categoryId": "1b63",
+      "id": "1WbzxsZ"
+    }
+  ],
+  "categories": [
+    {
+      "id": "98d1",
+      "name": "Category 1",
+      "image": "./assets/anh1.jpg"
+    },
+    {
+      "id": "1b63",
+      "name": "Category 2",
+      "image": "./assets/anh2.jpg"
+    },
+    {
+      "name": "Category 3",
+      "image": "./assets/product-1.png",
+      "id": "6KCO9Qr"
+    }
+  ],
+  "users": [
+    {
+      "email": "admin@gmail.com",
+      "password": "$2a$10$rWlHnjIaD48QrjmEc1shMeumPvGaGJUKp3vFXHhId5UJEyP/3xKL.",
+      "name": "admin ok",
+      "id": 1
+    },
+    {
+      "email": "Admin1@gmail.com",
+      "password": "$2a$10$VhDHuYDnxICuFechCfhfRuYTUwx4CudDG6em4bYG2ho15RhdBgtla",
+      "name": "Amin1",
+      "id": 2
+    },
+    {
+      "email": "Admin2@gmail.com",
+      "password": "$2a$10$7eDTT1rv4jfZmxW/I1vEke8MLbkGGwIdL4tIIwYZyoutgua7WTCzK",
+      "name": "Admin",
+      "id": 3
+    }
+  ]
+}

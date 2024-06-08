@@ -1,0 +1,108 @@
+<h2 class="font-semibold text-xl">Product Add</h2>
+
+<form
+  action=""
+  class="bg-white p-3 rounded mt-4"
+  [formGroup]="addForm"
+  (ngSubmit)="onAdd()"
+>
+  <div class="mb-4">
+    <label for="" class="font-medium block">Product Name *</label>
+    <input
+      type="text"
+      class="border border-gray-300 mt-2 w-full rounded px-3 py-2 outline-none"
+      placeholder="Product Name"
+      formControlName="name"
+    />
+    <p
+      class="text-sm mt-1"
+      *ngIf="
+        !addForm.controls.name.valid &&
+        (addForm.controls.name.dirty || addForm.controls.name.touched)
+      "
+    >
+      Please enter name!
+    </p>
+  </div>
+
+  <div class="mb-4">
+    <label for="" class="font-medium block">Product Price *</label>
+    <input
+      type="number"
+      class="border border-gray-300 mt-2 w-full rounded px-3 py-2 outline-none"
+      placeholder="Product Price"
+      formControlName="price"
+    />
+    <p
+      class="text-sm mt-1"
+      *ngIf="
+        !addForm.controls.price.valid &&
+        (addForm.controls.price.dirty || addForm.controls.price.touched)
+      "
+    >
+      Please enter price!
+    </p>
+  </div>
+
+  <div class="mb-4">
+    <label for="" class="font-medium block">Product Image *</label>
+    <input
+      type="text"
+      class="border border-gray-300 mt-2 w-full rounded px-3 py-2 outline-none"
+      placeholder="Product Image"
+      formControlName="image"
+    />
+    <p
+      class="text-sm mt-1"
+      *ngIf="
+        !addForm.controls.image.valid &&
+        (addForm.controls.image.dirty || addForm.controls.image.touched)
+      "
+    >
+      Please enter image!
+    </p>
+  </div>
+
+  <div class="mb-4">
+    <label for="" class="font-medium block">Category *</label>
+    <select
+      name=""
+      id=""
+      class="border border-gray-300 mt-2 w-full rounded px-3 py-2 outline-none"
+      formControlName="categoryId"
+    >
+      <option value="">Select category</option>
+      @for (item of categories; track item.id) {
+      <option value="{{ item.id }}">{{ item.name }}</option>
+      }
+    </select>
+    <p
+      class="text-sm mt-1"
+      *ngIf="
+        !addForm.controls.categoryId.valid &&
+        (addForm.controls.categoryId.dirty ||
+          addForm.controls.categoryId.touched)
+      "
+    >
+      Please select category!
+    </p>
+  </div>
+
+  <div class="mb-4">
+    <label for="" class="font-medium block">Product Description</label>
+    <textarea
+      name=""
+      id=""
+      class="border border-gray-300 mt-2 w-full rounded px-3 py-2 outline-none"
+      formControlName="description"
+      placeholder="Product Description"
+    ></textarea>
+  </div>
+
+  <button
+    [disabled]="!addForm.valid"
+    class="bg-[#3c50e0] w-full rounded py-2 text-white font-semibold [&:disabled]:opacity-45"
+  >
+    Add Product
+  </button>
+</form>
